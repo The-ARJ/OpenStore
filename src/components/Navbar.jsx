@@ -5,8 +5,8 @@ const Navbar = () => {
   return (
     <div>
       {/* Navbar Start */}
-      <div className="container-fluid">
-        <div className="row border-top px-xl-5">
+      <div className="container-fluid mb-2 bg-success">
+        <div className="row border-top px-xl-5 ">
           <div className="col-lg-3 d-none d-lg-block">
             <a
               className="btn shadow-none d-flex align-items-center justify-content-between bg-warning text-white w-100"
@@ -18,15 +18,15 @@ const Navbar = () => {
               <i className="fa fa-angle-down text-dark" />
             </a>
             <nav
-              className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
+              className="collapse  position-absolute navbar navbar-vertical navbar-light align-items-start -0 bg-success"
               id="navbar-vertical"
-              style={{ width: "calc(100% - 30px)", zIndex: 1 }}
+              style={{ width: "calc(100% - 30px)", zIndex: 1000 }}
             >
               <div
-                className="navbar-nav w-100 overflow-hidden"
+                className="navbar-nav w-100  overflow-hidden"
                 style={{ height: 410 }}
               >
-                <div className="nav-item dropdown">
+                <div className="nav-item dropdown ">
                   <a href="#" className="nav-link" data-toggle="dropdown">
                     Dresses <i className="fa fa-angle-down float-right mt-1" />
                   </a>
@@ -72,14 +72,14 @@ const Navbar = () => {
               </div>
             </nav>
           </div>
-          <div className="col-lg-9">
-            <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+          <div className="col-lg-9 ">
+            <nav className="navbar bg-success navbar-expand-lg  navbar-light py-3 py-lg-0 px-0">
               <a href className="text-decoration-none d-block d-lg-none">
                 <h1 className="m-0 display-5 font-weight-semi-bold">
-                  <span className="text-warning font-weight-bold border px-3 mr-1">
-                    E
+                  <span className="text-success font-weight-bold">
+                    Open
                   </span>
-                  Shopper
+                  Store
                 </h1>
               </a>
               <button
@@ -94,8 +94,8 @@ const Navbar = () => {
                 className="collapse navbar-collapse justify-content-between"
                 id="navbarCollapse"
               >
-                <div className="navbar-nav mr-auto py-0">
-                  <NavLink to="/" className="nav-item nav-link">
+                <div className="navbar-nav  mr-auto py-0">
+                  <NavLink to="/" className="nav-item  nav-link">
                     Home
                   </NavLink>
                   <NavLink to="/shop" className="nav-item nav-link">
