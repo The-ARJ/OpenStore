@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import {FaAngleDown} from 'react-icons/fa'
 
 const Navbar = () => {
   return (
@@ -15,7 +16,7 @@ const Navbar = () => {
               style={{ height: 65, marginTop: "-1px", padding: "0 30px" }}
             >
               <h6 className="m-0">Categories</h6>
-              <i className="fa fa-angle-down text-dark" />
+              <FaAngleDown/>
             </a>
             <nav
               className="collapse  position-absolute navbar navbar-vertical navbar-light align-items-start -0 bg-success"
@@ -28,7 +29,7 @@ const Navbar = () => {
               >
                 <div className="nav-item dropdown ">
                   <a href="#" className="nav-link" data-toggle="dropdown">
-                    Dresses <i className="fa fa-angle-down float-right mt-1" />
+                    Dresses <FaAngleDown className="float-right mt-1" />
                   </a>
                   <div className="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
                     <a href className="dropdown-item">
@@ -74,14 +75,12 @@ const Navbar = () => {
           </div>
           <div className="col-lg-9 ">
             <nav className="navbar bg-success navbar-expand-lg  navbar-light py-3 py-lg-0 px-0">
-              <a href className="text-decoration-none d-block d-lg-none">
+              <NavLink to='/' className="text-decoration-none d-block d-lg-none">
                 <h1 className="m-0 display-5 font-weight-semi-bold">
-                  <span className="text-success font-weight-bold">
-                    Open
-                  </span>
+                  <span className="text-warning font-weight-bold">Open</span>
                   Store
                 </h1>
-              </a>
+              </NavLink>
               <button
                 type="button"
                 className="navbar-toggler"
@@ -91,7 +90,7 @@ const Navbar = () => {
                 <span className="navbar-toggler-icon" />
               </button>
               <div
-                className="collapse navbar-collapse justify-content-between"
+                className="collapse navbar-collapse text-center justify-content-between"
                 id="navbarCollapse"
               >
                 <div className="navbar-nav  mr-auto py-0">
@@ -101,10 +100,14 @@ const Navbar = () => {
                   <NavLink to="/shop" className="nav-item nav-link">
                     Shop
                   </NavLink>
-                  <a href="detail.html" className="nav-item nav-link">
-                    Shop Detail
-                  </a>
-                  <div className="nav-item dropdown">
+                  <NavLink to="/about" className="nav-item nav-link">
+                    About
+                  </NavLink>
+                  <NavLink to="/contact" className="nav-item nav-link">
+                    Contact
+                  </NavLink>
+
+                  {/* <div className="nav-item dropdown">
                     <a
                       href="#"
                       className="nav-link dropdown-toggle"
@@ -120,18 +123,16 @@ const Navbar = () => {
                         Checkout
                       </a>
                     </div>
-                  </div>
-                  <a href="contact.html" className="nav-item nav-link">
-                    Contact
-                  </a>
+                  </div> */}
+         
                 </div>
                 <div className="navbar-nav ml-auto py-0">
-                  <a href className="nav-item nav-link">
+                  <NavLink to='' className="nav-item nav-link">
                     Login
-                  </a>
-                  <a href className="nav-item nav-link">
+                  </NavLink>
+                  <NavLink to='' className="nav-item nav-link">
                     Register
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </nav>

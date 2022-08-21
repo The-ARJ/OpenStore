@@ -277,9 +277,9 @@ button {
   border-radius: 0;
 }
 
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+button:hover {
+  outline: 1px  -webkit-focus-ring-color;
+  
 }
 
 input,
@@ -4680,7 +4680,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #D19C97;
+  color: var(--warning);
   background-color: #fff;
   border: 1px solid #dee2e6;
 }
@@ -4706,8 +4706,8 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #D19C97;
-  border-color: #D19C97;
+  background-color: var(--success);
+  border-color: var(--success);
 }
 
 .page-item.disabled .page-link {

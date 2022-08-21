@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { FaAngleUp } from "react-icons/fa";
+import { FaAngleUp,FaMapMarkerAlt,FaEnvelope,FaPhoneAlt } from "react-icons/fa";
 import SocialMedia from "./SocialMedia";
 import QuickLinks from "./QuickLinks";
 import NewsLetter from "./NewsLetter";
@@ -25,9 +25,9 @@ const Footer = () => {
   };
   return (
     <div>
-      <div className="container-fluid bg-warning text-dark mt-5 pt-5">
-        <div className="row px-xl-5 pt-5">
-          <div className="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+      <div className="container-fluid bg-warning text-dark mt-5 pt-2">
+        <div className="row px-xl-5  pt-5">
+          <div className="col-lg-4  col-md-12 mb-5 pr-3 pr-xl-5">
             <a href className="text-decoration-none">
               <h1 className="mb-4 display-5 font-weight-semi-bold">
                 <span className="text-success font-weight-bold px-0 mr-1">
@@ -41,22 +41,24 @@ const Footer = () => {
               no sit erat lorem et magna ipsum dolore amet erat.
             </p>
             <p className="mb-2">
-              <i className="fa fa-map-marker-alt text-success mr-3" />
+              <FaMapMarkerAlt className=" text-success mr-3" />
               Basundhara, Kathmandu, Nepal
             </p>
             <p className="mb-2">
-              <i className="fa fa-envelope text-success mr-3" />
+              <FaEnvelope className="text-success mr-3" />
               joshiaayush871@gmail.com
             </p>
             <p className="mb-0">
-              <i className="fa fa-phone-alt text-success mr-3" />
+              <FaPhoneAlt className=" text-success mr-3" />
               +977 9818984104
             </p>
           </div>
-          <div className="col-lg-8 col-md-12">
+          <div className="col-lg-8 col-md-12  ">
             <div className="row">
+            <div className="col-md-4 col-6 mb-5">
               <QuickLinks />
-              <div className="col-md-4 mb-5">
+              </div>
+              <div className="col-md-4 col-6 mb-5">
                 <SocialMedia />
               </div>
               <NewsLetter />

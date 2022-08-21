@@ -11,7 +11,7 @@ const SocialMedia = () => {
   return (
     <>
       <h5 className="font-weight-bold text-dark mb-4">Socail Media</h5>
-      <div className="d-flex flex-column justify-content-start">
+      <div className="d-flex flex-column justify-content-center">
         <a className="text-dark mb-2" href="index.html">
           <BsFacebook className="mr-2" />
           Facebook
