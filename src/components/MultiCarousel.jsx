@@ -12,15 +12,15 @@ import twenty from "../assets/20.jpg";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import axios from "axios";
 
 const MultiCarousel = () => {
+  // USing Axios to Fetch Data
   const [Products, setProduct] = useState([]);
-
-  const getData = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-    setProduct(await response.json());
-  };
-
+  const getData = async()=>{
+    const response = await axios.get('https://fakestoreapi.com/products')
+    setProduct(response.data)
+  }
   useEffect(() => {
     getData();
   }, []);

@@ -4,15 +4,29 @@ import Pagination from "../components/Pagination";
 
 import { FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
 import MultiCarousel from "../components/MultiCarousel";
-
+import axios from "axios";
 const Shop = () => {
+
+  // Using Fetch 
+  
+  // const [Products, setProduct] = useState([]);
+
+  // const getData = async () => {
+  //   const response = await fetch("https://fakestoreapi.com/products");
+  //   setProduct(await response.json());
+  // };
+
+  // useEffect(() => {
+  //   getData();
+  // }, []);
+
+
+  // USing Axios to Fetch Data
   const [Products, setProduct] = useState([]);
-
-  const getData = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-    setProduct(await response.json());
-  };
-
+  const getData = async()=>{
+    const response = await axios.get('https://fakestoreapi.com/products')
+    setProduct(response.data)
+  }
   useEffect(() => {
     getData();
   }, []);
@@ -86,10 +100,10 @@ const Shop = () => {
                         </div>
                         <div className="card-body border-left border-right text-center p-0 pt-4 pb-3">
                           <h6 className="text-truncate mb-3">
-                            Colorful Stylish Shirt
+                            {prod.title}
                           </h6>
                           <div className="d-flex justify-content-center">
-                            <h6 className="small">$123.00</h6>
+                            <h6 className="small">${prod.price}</h6>
                             <h6 className="text-muted small ml-2">
                               <del>$123.00</del>
                             </h6>
